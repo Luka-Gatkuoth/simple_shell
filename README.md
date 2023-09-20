@@ -1,0 +1,1 @@
+This is simple shell project, Author name: 1. Luka Gatkuoth Nyuot, 2. partner absent
