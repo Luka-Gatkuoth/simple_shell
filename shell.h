@@ -42,7 +42,8 @@ int num;
 char *str;
 struct liststr *next;
 } list_t;
-/*** struct passinfo - contains pseudo-arguements to pass into a function,
+/**
+ *struct passinfo - contains pseudo-arguements to pass into a function,
 * allowing uniform prototype for function pointer struct
 * @arg: a string generated from getline containing arguements
 * @argv:an array of strings generated from arg
@@ -87,10 +88,11 @@ int histcount;
 info_t;
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-0, 0, 0}/**
-* struct builtin - contains a builtin string and related function
-* @type: the builtin command flag
-* @func: the function
+0, 0, 0}
+/**
+*struct builtin - contains a builtin string and related function
+*@type: the builtin command flag
+*@func: the function
 */
 typedef struct builtin
 {
@@ -163,7 +165,8 @@ void set_info(info_t *, char **);
 void free_info(info_t *, int);
 /* toem_environ.c */
 char *_getenv(info_t *, const char *);
-int _myenv(info_t *);int _mysetenv(info_t *);
+int _myenv(info_t *);
+int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 /* toem_getenv.c */
