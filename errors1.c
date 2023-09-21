@@ -21,9 +21,10 @@ if (result > INT_MAX)
 return (-1);
 }
 else
-return (-1);}
+return (-1);
+}
 return (result);
-} 
+}
 /**
 * print_error - prints an error message
 * @info: the parameter & return info struct
@@ -40,13 +41,12 @@ _eputs(": ");
 _eputs(info->argv[0]);
 _eputs(": ");
 _eputs(estr);
-} 
+}
 /**
 * print_d - function prints a decimal (integer) number (base 10)
 * @input: the input
 * @fd: the filedescriptor to write to
-**
-Return: number of characters printed
+* Return: number of characters printed
 */
 int print_d(int input, int fd)
 {
@@ -65,24 +65,24 @@ else
 _abs_ = input;
 current = _abs_;
 for (i = 1000000000; i > 1; i /= 10)
-{if (_abs_ / i)
+{
+if (_abs_ / i)
 {
 __putchar('0' + current / i);
 count++;
 }
 current %= i;
-}__
-putchar('0' + current);
+}
+__putchar('0' + current);
 count++;
 return (count);
-} 
+}
 /**
 * convert_number - converter function, a clone of itoa
 * @num: number
 * @base: base
 * @flags: argument flags
-**
-Return: string
+* Return: string
 */
 char *convert_number(long int num, int base, int flags)
 {
@@ -106,12 +106,12 @@ n /= base;
 } while (n != 0);
 if (sign)
 *--ptr = sign;
-return (ptr);} 
+return (ptr);
+}
 /**
 * remove_comments - function replaces first instance of '#' with '\0'
 * @buf: address of the string to modify
-**
-Return: Always 0;
+* Return: Always 0;
 */
 void remove_comments(char *buf)
 {

@@ -24,7 +24,7 @@ return (-2);
 }
 info->err_num = -1;
 return (-2);
-} 
+}
 /**
 * _mycd - changes the current directory of the process
 * @info: Structure containing potential arguments. Used to maintain
@@ -51,10 +51,11 @@ else if (_strcmp(info->argv[1], "-") == 0)
 {
 if (!_getenv(info, "OLDPWD="))
 {
-_puts(s);_putchar('\n');
+_puts(s);
+_putchar('\n');
 return (1);
-}_
-puts(_getenv(info, "OLDPWD=")), _putchar('\n');
+}
+_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
 chdir_ret = /* TODO: what should this be? */
 chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
 }
@@ -71,7 +72,7 @@ _setenv(info, "OLDPWD", _getenv(info, "PWD="));
 _setenv(info, "PWD", getcwd(buffer, 1024));
 }
 return (0);
-} 
+}
 /**
 * _myhelp - changes the current directory of the process
 * @info: Structure containing potential arguments. Used to maintain
